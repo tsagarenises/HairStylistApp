@@ -1,0 +1,34 @@
+.stylistlocation {
+  font-size: x-small;
+}
+.salonloc {
+  font-size: small;
+  color: black;
+}
+.viewall {
+  float: right;
+  padding-right: 10px;
+  color: crimson;
+  font-weight: bold;
+  font-size: small;
+}
+
+.beststylist {
+  font-weight: bolder;
+  display: block;
+  float: left;
+  padding-left: 10px;
+}
+.specialoffers {
+  color: primary;
+  font-weight: bolder;
+  display: block;
+  float: left;
+  padding-left: 10px;
+}
+.popularservices {
+  font-weight: bolder;
+  display: block;
+  float: left;
+  padding-left: 10px;
+}

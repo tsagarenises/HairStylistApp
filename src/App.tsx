@@ -1,6 +1,7 @@
 import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
+  IonBadge,
   IonIcon,
   IonLabel,
   IonRouterOutlet,
@@ -10,10 +11,11 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
+import { calendar, chatbox, home, informationCircle } from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
+import Tab4 from './pages/Tab4';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -50,22 +52,32 @@ const App: React.FC = () => (
           <Route path="/tab3">
             <Tab3 />
           </Route>
+          <Route path="/tab4">
+            <Tab4 />
+          </Route>
           <Route exact path="/">
             <Redirect to="/tab1" />
           </Route>
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
           <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+            <IonIcon icon={home} />
+            <IonLabel>Home</IonLabel>
+            <IonBadge>6</IonBadge>
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+            <IonIcon icon={calendar} />
+            <IonLabel>Appointments</IonLabel>
+            <IonBadge>2</IonBadge>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+            <IonIcon icon={chatbox} />
+            <IonLabel>Messaging</IonLabel>
+            <IonBadge>10</IonBadge>
+          </IonTabButton>
+          <IonTabButton tab="tab4" href="/tab4">
+            <IonIcon icon={informationCircle} />
+            <IonLabel>Settings</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
